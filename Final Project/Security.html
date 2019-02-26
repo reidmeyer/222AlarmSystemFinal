@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+   <!-- header stuff -->
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Security/Smarthome Device</title>
+      <link rel="stylesheet" href="SecurityStyle.css">
+      <script type="text/javascript" src="resources/particle/particle.min.js"></script>
+      <script src="./Security.js"></script>
+      <script src="./SecurityModel.js"></script>
+   </head>
+   <body>
+      <div id = "HomeBox">
+         <!-- nav bar -->
+         <div class = "nav">
+            <ul>
+               <li><button class = "selectedbutton">Home</button></li>
+               <li><button class = "navbutton" onclick = "fadeOut()">Settings</button></li>
+            </ul>
+         </div>
+         <!-- Contains alarm and door status, when door last went off, enable/ diable alarm button and notify emergency contact button -->
+         <div>
+            <h2>System Status</h2>
+            <!-- Alarm Status -->
+            <div class = "statuslabel">
+               Alarm Status: <span class = "status" id = "alarmStatus">Armed</span>
+            </div>
+            <!-- Alarm Date -->
+            <div class = "statuslabel">
+               Alarm went off last at: <span class = "status" id = "lastWentOffTime">3:49PM</span>
+            </div>
+            <!-- Powerstrip Status -->
+            <div class = "statuslabel">
+               Powerstrip Status: <span class = "status" id = "powerStripStatus">Strip Off</span>
+            </div>
+            <!-- Alarm Button -->
+            <p>
+               <button class = "buttonstyle" id = "alarmButton" type="button">Disable/Enable Alarm</button>
+            </p>
+            <!-- Powerstrip Button -->
+            <p>
+               <button class = "buttonstyle" id = "powerStripButton" type="button">Toggle Powerstrip</button>
+            </p>
+            <a href="http://172.20.10.3" class = "linkstyle">Go to Pictures</a>
+         </div>
+      </div>
+      <!--
+         <div id = "CameraBox">
+
+            <div class = "nav">
+              <ul>
+               <li><button class = "navbutton">Home</button></li>
+               <li><button class = "selectedbutton">Camera</button></li>
+               <li><button class = "navbutton">Settings</button></li>
+              </ul>
+            </div>
+
+
+            <div>
+               <h2>Camera View</h2>
+               <div class = "image">
+                 Latest Image:
+                 <img src="PlaceholderPic.jpg" alt="Camera Picture">
+               </div>
+
+
+
+             <br />  Pan Camera:
+               <div class = "slidecontainer">
+                  <input type="range" min="5" max="60" value="60" class="slider" id = "autoCloseSlider">
+               </div>
+
+               <p>
+                  <button class = "buttonstyle" type="button">Push to Speak</button>
+               </p>
+            </div>
+         </div>
+         -->
+      <div id = "SettingsBox">
+         <!-- nav bar -->
+         <div class = "nav">
+            <ul>
+               <li><button class = "navbutton" onclick="fadeIn()">Home</button></li>
+               <li><button class = "selectedbutton">Settings</button></li>
+            </ul>
+         </div>
+         <div>
+            <h2>Settings</h2>
+            <!-- Ringer Status -->
+            <div class = "statuslabel">
+               Ringer Status: <span class = "status" id = "ringerStatus">On</span>
+            </div>
+            <!-- Ringer Button -->
+            <p>
+               <button class = "buttonstyle" id = "ringerButton" type="button">Turn Ringer On/Off</button>
+            </p>
+            <!-- Log of last alarm dates -->
+            <h2>Log of when Alarm Went Off</h2>
+            <div id = "scrollingBox">No Recent Logs</div>
+            <!-- May or may not be implemented in future updates-->
+            <!--
+               <br />
+               <span class = "statuslabel"> Turn Radio On </span>
+               <label class="switch">
+                 <input type="checkbox">
+                 <span class="slider round"></span>
+               </label>
+
+               <br />
+                 <span class = "statuslabel"> Radio Frequency </span>
+                 <input type="text" name="radiofrequency"><br>
+                 <button class = "buttonstyle" type="button">Set Radio Frequency</button>
+
+               <br />
+                 <span class = "statuslabel"> Change Emergency Phone Number </span>
+                 <input type="text" id = "numberText" name="emergencynumber"><br>
+                 <button class = "buttonstyle" id = "setNumberButton" type="button">Set Emergency Number</button>
+
+                 <br />
+                   <span class = "statuslabel"> Set Password </span>
+                   <input type="text" name="password"><br>
+                   <button class = "buttonstyle" type="button">Set Password</button>
+               -->
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,95 @@
+body{
+  background-color: #e6ffff;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+}
+
+ul {
+    background-color: #3366ff;
+}
+
+.navbutton {
+  border: none;
+  background-color: #3366ff;
+  color: #ffffff;
+  text-align: center;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.selectedbutton {
+  border: none;
+  background-color: #ffffff;
+  color: #3366ff;
+  text-align: center;
+  display: inline-block;
+  font-size: 18px;
+}
+
+h2 {
+  color: #3366ff;
+  font-family: sans-serif;
+  font-size: 28px;
+}
+
+.statuslabel{
+  font-family: sans-serif;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.status {
+  color: #3366ff;
+  font-weight: bold;
+}
+
+.image {
+  font-family: sans-serif;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.buttonstyle {
+  border: none;
+  background-color: #3366ff;
+  color: #ffffff;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.linkstyle {
+  background-color: #3366ff;
+  color: #ffffff;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+  text-decoration: none;
+  font-family: sans-serif;
+  padding: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#SettingsBox{
+  opacity: 0;
+}
+
+/* Code Based on https://www.quackit.com/html/codes/html_scroll_box.cfm */
+#scrollingBox{
+  height:200px;
+  width:95%;
+  overflow:auto;
+  background-color:#e6ffff;
+  color:#3366ff;
+  font-family:sans-serif;
+  padding:10px;
+}
